@@ -1,0 +1,54 @@
+.homepage {
+  &__section {
+    &-intro {
+      .homepage__div {
+        &-right {
+          & img {
+            width: 515px;
+            height: 524px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    &-collection {
+      .homepage__div {
+        &-collection {
+          &-container {
+            height: 644px;
+          }
+
+          &-left {
+            height: 100%;
+            background: url("../../../src/assets/img/mens-collection.jpg"),
+              lightgray 0px -257.577px / 100% 140.561% no-repeat;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          &-right {
+            height: 100%;
+            background: url("../../../src/assets/img/womens-collection.jpg"),
+              lightgray 0px -257.577px / 100% 140.561% no-repeat;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+
+    &-about {
+      .homepage__div-about {
+        &-right {
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 277px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

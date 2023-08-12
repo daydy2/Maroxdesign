@@ -1,0 +1,33 @@
+// mixin for responsive design
+@mixin responsive($breakpoint) {
+    @if $breakpoint == "xs" {
+      @media only screen and (max-width: 30rem) {
+        @content;
+      }
+    } @else if $breakpoint == "sm" {
+      @media only screen and (min-width: 30.0625rem) and (max-width: 48rem) {
+        @content;
+      }
+    } @else if $breakpoint == "md" {
+      @media only screen and (min-width: 48.0625rem) and (max-width: 64rem) {
+        @content;
+      }
+    } @else if $breakpoint == "lg" {
+      @media only screen and (min-width: 64rem) {
+        @content;
+      }
+    } @else if $breakpoint == "xl" {
+      @media only screen and (min-width: 85.375rem) {
+        @content;
+      }
+    }
+  }
+  
+  @mixin responsive-display($display) {
+    @if $display == "hide" {
+      display: none !important;
+    } @else if $display == "show" {
+      display: block !important;
+    }
+  }
+  

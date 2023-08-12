@@ -1,0 +1,26 @@
+.btn {
+  width: 100%;
+  display: flex;
+  place-content: center center;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  @extend .header__2 !optional;
+  text-transform: capitalize;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__default {
+    padding: .7rem 2rem;
+    white-space: nowrap;
+  }
+  &__gold {
+    background-color: $dark-gold;
+    color: $neutral-white;
+  }
+  &__neutral {
+    background-color: $neutral-white;
+    color: $dark-gold;
+  }
+}

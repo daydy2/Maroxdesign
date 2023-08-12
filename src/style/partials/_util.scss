@@ -1,0 +1,73 @@
+// Extra small screens (less than 576px)
+
+@include responsive("xs") {
+  .xs-hide {
+    @include responsive-display("hide");
+  }
+  .xs-show {
+    @include responsive-display("show");
+  }
+}
+
+// Small screens (576px - 767.98px)
+@include responsive("sm") {
+  .sm-hide {
+    @include responsive-display("hide");
+  }
+  .sm-show {
+    @include responsive-display("show");
+  }
+}
+
+// Medium screens (768px - 991.98px)
+@include responsive("md") {
+  .md-hide {
+    @include responsive-display("hide");
+  }
+  .md-show {
+    @include responsive-display("show");
+  }
+}
+
+// Large screens (992px - 1199.98px)
+@include responsive("lg") {
+  .lg-hide {
+    @include responsive-display("hide");
+  }
+  .lg-show {
+    @include responsive-display("show");
+  }
+}
+
+// Extra large screens (1200px and up)
+@include responsive("xl") {
+  .xl-hide {
+    @include responsive-display("hide");
+  }
+  .xl-show {
+    @include responsive-display("show");
+  }
+}
+
+.pad-main {
+  padding-inline: 5.5rem;
+}
+
+.ink {
+  color: #17191c;
+}
+.grey-bold {
+  color: #52525b;
+}
+.vampire-grey {
+  color: $vampire-grey;
+}
+.black {
+  color: $neutral-black;
+}
+.white {
+  color: $neutral-white;
+}
+.black-red {
+  color: $black-red;
+}

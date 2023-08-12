@@ -1,0 +1,27 @@
+$grid-columns: 12;
+$breakpoints: (
+  "xs": 480px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1200px,
+  "xl": 1366px,
+);
+
+@for $i from 0 through $grid-columns {
+  .grid-#{$i + 1} {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: repeat(#{$i + 1}, 1fr);
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @for $i from 1 through $grid-columns {
+    .grid-#{$breakpoint}-#{$i} {
+      @include responsive(#{$breakpoint}) {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
+    }
+  }
+}
