@@ -1,3 +1,46 @@
 .nav {
   background-color: $tint-white;
+
+  &__div {
+    &-link {
+      &-cat {
+        position: relative; 
+        &:hover {
+          .nav__div-link-dropdown {
+            display: block;
+          }
+        }
+        &:hover .nav__div-link-dropdown {
+          display: block; 
+        }
+      }
+      &-dropdown {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: 99;
+
+        &-container {
+          padding: 16px 36px;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          background-color: rgba($tiger-orange, 0.7);
+          border-radius: 8px;
+          /* Adjust the width of the dropdown container if needed */
+          // width: 200px;
+
+          a {
+            padding: 10px 10px;
+            border-radius: 8px;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+              background-color: rgba($neutral-white, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
 }
