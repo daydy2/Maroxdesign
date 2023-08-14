@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Buttons from "../component/buttons";
 import Intro from "../assets/img/intro-1.png";
+import Intro2 from "../assets/img/intro-2.png";
+import Intro3 from "../assets/img/intro-3.png";
+import Intro4 from "../assets/img/intro-4.png";
+import Intro5 from "../assets/img/intro-5.png";
 import About1 from "../assets/img/about-1.png";
 import About2 from "../assets/img/about-2.png";
 import About3 from "../assets/img/about-3.png";
@@ -16,26 +20,10 @@ import { Link } from "react-router-dom";
 import ProductCard from "../component/cards/ProductCard";
 import CarouselContainer from "../component/common/Carousel/Carousel";
 import Feedback from "../component/common/Feedback";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Homepage = () => {
-  // const [scrollY, setScrollY] = useState(0);
-
-  // const handleScroll = () => {
-  //   setScrollY(window.scrollY);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // const parallaxStyles = {
-  //   // transform: `translateY(${scrollY * 0.6}px)`,
-  // };
-
   return (
     <main className="homepage">
       <section className="homepage__section-intro pad-main py-[100px]">
@@ -65,9 +53,15 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          <div className="homepage__div-intro-right flex justify-end">
+          {/* <div className="homepage__div-intro-right flex justify-end"> */}
+          <IntroCarousel>
             <img src={Intro} alt="intro" className="" />
-          </div>
+            <img src={Intro2} alt="intro" className="" />
+            <img src={Intro3} alt="intro" className="" />
+            <img src={Intro4} alt="intro" className="" />
+            <img src={Intro5} alt="intro" className="" />
+          </IntroCarousel>
+          {/* </div> */}
         </div>
       </section>
 
@@ -403,7 +397,7 @@ export default Homepage;
 
 export const CatImg = ({ img, text = "", to = "" }) => {
   const styles = {
-    backgroundImage: `url(${img})`,
+    background: `url(${img}), lightgray 0px -257.577px / 100% 140.561% no-repeat`,
   };
   return (
     <Link to={to} className="catImg">
@@ -421,4 +415,51 @@ CatImg.propTypes = {
   img: PropTypes.string,
   text: PropTypes.string,
   to: PropTypes.string,
+};
+
+export const IntroCarousel = ({ children }) => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 800 },
+      items: 1,
+      //   slidesToSlide: 4, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 800, min: 464 },
+      items: 1,
+      //   slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      //   slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+  return (
+    <Carousel
+      swipeable={false}
+      draggable={false}
+      showDots={true}
+      responsive={responsive}
+      ssr={true} // means to render carousel on server-side.
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={2000}
+      keyBoardControl={true}
+      customTransition={"transform 600ms ease-in-out"}
+      transitionDuration={500}
+      arrows={false}
+      // removeArrowOnDeviceType={["tablet", "mobile"]}
+      // deviceType={this.props.deviceType}
+      containerClass="carousel-intro-container"
+      dotListClass="custom-dot-intro-list"
+      itemClass=""
+    >
+      {children}
+    </Carousel>
+  );
+};
+
+IntroCarousel.propTypes = {
+  children: PropTypes.node,
 };

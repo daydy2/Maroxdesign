@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const ComfortCard = ({ img, text }) => {
   const styles = {
-    backgroundImage: `url(${img})`,
+    background: `url(${img}), lightgray 0px -257.577px / 100% 140.561% no-repeat`,
   };
   return (
     <div className="comfortCard">
