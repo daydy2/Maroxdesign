@@ -1,0 +1,46 @@
+.productCard {
+  width: 425px;
+  background: $aqua-haze;
+  padding: 24px 16px;
+  &__div {
+    &-container {
+      background: transparent;
+    }
+    &-img {
+      img {
+        width: 100%;
+        height: 337px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.comfortCard {
+  &-container {
+    width: 1440px;
+    height: 774px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.react-multi-carousel-track {
+  gap: 25px;
+  width: inherit;
+
+  .carouselContainer-list {
+    width: inherit !important;
+  }
+}
+.react-multiple-carousel__arrow {
+  border: 2px solid $tiger-orange !important;
+}
+.carousel-comfort-container {
+  display: flex;
+  gap: 2rem;
+  width: inherit;
+}
+.carousel-comfort-list {
+  width: inherit !important;
+}

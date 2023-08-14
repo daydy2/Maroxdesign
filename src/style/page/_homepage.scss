@@ -50,5 +50,50 @@
         }
       }
     }
+
+    &-parallax {
+      .homepage__div-parallax {
+        &-container {
+          height: 700px;
+          background: url("../../../src/assets/img/fight.gif"),
+            lightgray 0px -257.577px / 100% 140.561% no-repeat;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    &-categories {
+      .homepage__div-categories {
+        &-body {
+          background: rgba(191, 144, 70, 0.1);
+          padding: 55px;
+        }
+      }
+    }
+
+    &-comfort {
+      .homepage__div-comfort {
+        &-container {
+          background-image: url("../../../src//assets//img/comfort.gif");
+          height: 774px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.catImg {
+  width: 100%;
+  background: $neutral-white;
+  padding: 30px 20px;
+
+  &-container {
+    height: 405px;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
   }
 }

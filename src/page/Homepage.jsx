@@ -1,15 +1,41 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Buttons from "../component/buttons";
 import Intro from "../assets/img/intro-1.png";
 import About1 from "../assets/img/about-1.png";
 import About2 from "../assets/img/about-2.png";
 import About3 from "../assets/img/about-3.png";
 import About4 from "../assets/img/about-4.png";
+import MenSport from "../assets/img/men-sport.png";
 import { ReactComponent as Medal } from "../assets/icons/medal.svg";
 import { ReactComponent as Truck } from "../assets/icons/truck.svg";
 import { ReactComponent as Headphone } from "../assets/icons/headphone.svg";
+import Bra from "../assets/img/bra.png";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import ProductCard from "../component/cards/ProductCard";
+import CarouselContainer from "../component/common/Carousel/Carousel";
+import Feedback from "../component/common/Feedback";
+
 const Homepage = () => {
+  // const [scrollY, setScrollY] = useState(0);
+
+  // const handleScroll = () => {
+  //   setScrollY(window.scrollY);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  // const parallaxStyles = {
+  //   // transform: `translateY(${scrollY * 0.6}px)`,
+  // };
+
   return (
     <main className="homepage">
       <section className="homepage__section-intro pad-main py-[100px]">
@@ -66,8 +92,8 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="homepage__section-about">
-        <div className="homepage__div-about-container grid-2 gap-6 pad-main py-[100px]">
+      <section className="homepage__section-about py-[100px]">
+        <div className="homepage__div-about-container grid-2 gap-6 pad-main ">
           <div className="homepage__div-about-left flex">
             <div className="homepage__div-about-left-text w-[85%] self-center">
               <h3 className="black header__7">About us</h3>
@@ -137,9 +163,262 @@ const Homepage = () => {
         </div>
       </section>
 
-      section.
+      <section className="homepage__section-parallax py-[100px]">
+        <div
+          className="homepage__div-parallax-container px-14 pt-52"
+          // style={parallaxStyles}
+        >
+          <h2 className="header__8 white w-[65%]">
+            We provide you with comfortable sports bras to enhance maximum
+            performance.
+          </h2>
+        </div>
+      </section>
+
+      <section className="homepage__section-categories">
+        <div className="homepage__div-categories-container">
+          <header className="pad-main mb-6">
+            <h3 className="p6 black">Categories</h3>
+          </header>
+          <div className="homepage__div-categories-body gap-[25px] grid-3">
+            <CatImg
+              img={"../../src/assets/img/intro-1.png"}
+              text="leggings"
+              to={"/"}
+            />
+            <CatImg
+              img={"../../src/assets/img/intro-1.png"}
+              text="bra"
+              to={"/"}
+            />
+            <CatImg
+              img={"../../src/assets/img/intro-1.png"}
+              text="shorts"
+              to={"/"}
+            />
+            <CatImg
+              img={"../../src/assets/img/intro-1.png"}
+              text="leggings"
+              to={"/"}
+            />
+            <CatImg
+              img={"../../src/assets/img/intro-1.png"}
+              text="bra"
+              to={"/"}
+            />
+            <CatImg
+              img={"../../src/assets/img/intro-1.png"}
+              text="shorts"
+              to={"/"}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage__section-women py-[100px]">
+        <div className="homepage__div-women-container">
+          <header className="pad-main mb-6">
+            <h3 className="p6 black">Women Top picks</h3>
+          </header>
+          <div className="homepage__div-women-body pl-[55px]">
+            <CarouselContainer>
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Intro}
+                name={"Durable Sports Leggings"}
+                color={"Blue"}
+                price={"$50.60"}
+              />
+            </CarouselContainer>
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage__section-bra">
+        <div className="homepage__div-bra-container">
+          <header className="pad-main mb-6">
+            <h3 className="p6 black">Women Sports Bras</h3>
+          </header>
+          <div className="homepage__div-bra-body pl-[55px]">
+            <CarouselContainer>
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={Bra}
+                name={"Stretch Sports Bra"}
+                color={"White"}
+                price={"$50.60"}
+              />
+            </CarouselContainer>
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage__section-comfort py-[100px]">
+        <div className="homepage__div-comfort-container pt-60 pl-12">
+          <h3 className="header__8 white w-[75%]">
+            Comfortable Sports outfits helps you with better sports performance.
+          </h3>
+        </div>
+      </section>
+
+      <section className="homepage__section-men">
+        <div className="homepage__div-men-container">
+          <header className="pad-main mb-6">
+            <h3 className="p6 black">Men Sports Shorts</h3>
+          </header>
+          <div className="homepage__div-men-body pl-[55px]">
+            <CarouselContainer>
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+              <ProductCard
+                img={MenSport}
+                name={"Cotton men sport short"}
+                color={"Gray"}
+                price={"$50.60"}
+              />
+            </CarouselContainer>
+          </div>
+        </div>
+      </section>
+
+      <section className="homepage__section-feedback pt-[100px] pb-[300px]">
+        <div className="homepage__div-feedback-container pad-main">
+          <header>
+            <h3 className="header__9 black text-center">
+              Here’s what people are saying
+            </h3>
+          </header>
+          <Feedback />
+        </div>
+      </section>
     </main>
   );
 };
 
 export default Homepage;
+
+export const CatImg = ({ img, text = "", to = "" }) => {
+  const styles = {
+    backgroundImage: `url(${img})`,
+  };
+  return (
+    <Link to={to} className="catImg">
+      <div
+        className="catImg-container flex justify-center items-center"
+        style={styles}
+      >
+        <p className="header__3 white uppercase">{text}</p>
+      </div>
+    </Link>
+  );
+};
+
+CatImg.propTypes = {
+  img: PropTypes.string,
+  text: PropTypes.string,
+  to: PropTypes.string,
+};

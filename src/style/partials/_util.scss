@@ -54,10 +54,10 @@
 }
 
 .ink {
-  color: #17191c;
+  color: $ink;
 }
 .grey-bold {
-  color: #52525b;
+  color: $grey-bold;
 }
 .vampire-grey {
   color: $vampire-grey;
@@ -68,6 +68,13 @@
 .white {
   color: $neutral-white;
 }
+
 .black-red {
   color: $black-red;
 }
+.bg-white {
+  background: $neutral-white;
+}
+
+
+
