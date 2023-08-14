@@ -21,14 +21,14 @@
 
           &-left {
             height: 100%;
-            background: url("../../../src/assets/img/mens-collection.jpg"),
+            background: url("/assets/mens-collection.jpg"),
               lightgray 0px -257.577px / 100% 140.561% no-repeat;
             background-repeat: no-repeat;
             background-size: cover;
           }
           &-right {
             height: 100%;
-            background: url("../../../src/assets/img/womens-collection.jpg"),
+            background: url("/assets/womens-collection.jpg"),
               lightgray 0px -257.577px / 100% 140.561% no-repeat;
             background-repeat: no-repeat;
             background-size: cover;
@@ -55,7 +55,7 @@
       .homepage__div-parallax {
         &-container {
           height: 700px;
-          background: url("../../../src/assets/img/fight.gif"),
+          background: url("/assets/fight.gif"),
             lightgray 0px -257.577px / 100% 140.561% no-repeat;
           background-repeat: no-repeat;
           background-size: cover;

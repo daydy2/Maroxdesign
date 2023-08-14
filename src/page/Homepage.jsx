@@ -175,36 +175,12 @@ const Homepage = () => {
             <h3 className="p6 black">Categories</h3>
           </header>
           <div className="homepage__div-categories-body gap-[25px] grid-3">
-            <CatImg
-              img={"../../src/assets/img/intro-1.png"}
-              text="leggings"
-              to={"/"}
-            />
-            <CatImg
-              img={"../../src/assets/img/intro-1.png"}
-              text="bra"
-              to={"/"}
-            />
-            <CatImg
-              img={"../../src/assets/img/intro-1.png"}
-              text="shorts"
-              to={"/"}
-            />
-            <CatImg
-              img={"../../src/assets/img/intro-1.png"}
-              text="leggings"
-              to={"/"}
-            />
-            <CatImg
-              img={"../../src/assets/img/intro-1.png"}
-              text="bra"
-              to={"/"}
-            />
-            <CatImg
-              img={"../../src/assets/img/intro-1.png"}
-              text="shorts"
-              to={"/"}
-            />
+            <CatImg img={"/assets/intro-1.png"} text="leggings" to={"/"} />
+            <CatImg img={"/assets/intro-1.png"} text="bra" to={"/"} />
+            <CatImg img={"/assets/intro-1.png"} text="shorts" to={"/"} />
+            <CatImg img={"/assets/intro-1.png"} text="leggings" to={"/"} />
+            <CatImg img={"/assets/intro-1.png"} text="bra" to={"/"} />
+            <CatImg img={"/assets/intro-1.png"} text="shorts" to={"/"} />
           </div>
         </div>
       </section>
@@ -444,7 +420,7 @@ export const IntroCarousel = ({ children }) => {
       ssr={true} // means to render carousel on server-side.
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={2000}
+      autoPlaySpeed={3000}
       keyBoardControl={true}
       customTransition={"transform 600ms ease-in-out"}
       transitionDuration={500}
