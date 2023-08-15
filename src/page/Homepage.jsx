@@ -22,47 +22,19 @@ import CarouselContainer from "../component/common/Carousel/Carousel";
 import Feedback from "../component/common/Feedback";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import IntroPage from "../component/common/Intro";
 
 const Homepage = () => {
   return (
     <main className="homepage">
       <section className="homepage__section-intro pad-main py-[100px]">
-        <div className="homepage__div-intro-container grid-2 ">
-          <div className="homepage__div-intro-left flex items-center justify-center">
-            <div>
-              <h1 className="header__5 black-red">
-                GEAR UP AND DOMINATE YOUR ACTIVE LIFESTYLE WITH OUR PREMIUM
-                SPORTSWEAR.
-              </h1>
-              <p className="p4 vampire-grey">
-                Shop the finest collection of sportswear and accessories at
-                unbeatable prices
-              </p>
-
-              <div className="flex items-center gap-3 mt-6">
-                <div>
-                  <Buttons color={"gold"} type={"link"} to={"/"}>
-                    Shop Women
-                  </Buttons>
-                </div>
-                <div>
-                  <Buttons color={"gold"} type={"link"} to={"/"}>
-                    Shop Men
-                  </Buttons>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <div className="homepage__div-intro-right flex justify-end"> */}
-          <IntroCarousel>
-            <img src={Intro} alt="intro" className="" />
-            <img src={Intro2} alt="intro" className="" />
-            <img src={Intro3} alt="intro" className="" />
-            <img src={Intro4} alt="intro" className="" />
-            <img src={Intro5} alt="intro" className="" />
-          </IntroCarousel>
-          {/* </div> */}
-        </div>
+        <IntroPage>
+          <img src={Intro} alt="intro" className="" />
+          <img src={Intro2} alt="intro" className="" />
+          <img src={Intro3} alt="intro" className="" />
+          <img src={Intro4} alt="intro" className="" />
+          <img src={Intro5} alt="intro" className="" />
+        </IntroPage>
       </section>
 
       <section className="homepage__section-collection pad-main">
@@ -251,6 +223,7 @@ const Homepage = () => {
                 name={"Stretch Sports Bra"}
                 color={"White"}
                 price={"$50.60"}
+                
               />
               <ProductCard
                 img={Bra}
@@ -371,14 +344,15 @@ const Homepage = () => {
 
 export default Homepage;
 
-export const CatImg = ({ img, text = "", to = "" }) => {
+export const CatImg = ({ img, text = "", to = "", }) => {
   const styles = {
     background: `url(${img}), lightgray 0px -257.577px / 100% 140.561% no-repeat`,
+    backgroundRepeat: "no-repeat",
   };
   return (
     <Link to={to} className="catImg">
       <div
-        className="catImg-container flex justify-center items-center"
+        className={`catImg-container flex justify-center items-center `}
         style={styles}
       >
         <p className="header__3 white uppercase">{text}</p>

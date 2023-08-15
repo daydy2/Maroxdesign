@@ -1,0 +1,11 @@
+.intropage {
+  &__div {
+    &-right {
+      & img {
+        width: 515px;
+        height: 524px;
+        object-fit: cover;
+      }
+    }
+  }
+}

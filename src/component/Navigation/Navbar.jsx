@@ -31,9 +31,15 @@ const Navbar = () => {
             </div>
             <div className="nav__div-link-dropdown">
               <div className="nav__div-link-dropdown-container">
-                <Link className="header__1 black">Men</Link>
-                <Link className="header__1 black">Women</Link>
-                <Link className="header__1 black">Accessories</Link>
+                <Link className="header__1 black" to={"/men"}>
+                  Men
+                </Link>
+                <Link className="header__1 black" to={"/women"}>
+                  Women
+                </Link>
+                <Link className="header__1 black" to={"/accessories"}>
+                  Accessories
+                </Link>
               </div>
             </div>
           </Link>

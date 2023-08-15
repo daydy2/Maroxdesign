@@ -1,17 +1,5 @@
 .homepage {
   &__section {
-    &-intro {
-      .homepage__div {
-        &-right {
-          & img {
-            width: 515px;
-            height: 524px;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-
     &-collection {
       .homepage__div {
         &-collection {
@@ -75,7 +63,8 @@
     &-comfort {
       .homepage__div-comfort {
         &-container {
-          background-image: url("/assets/comfort.gif");
+          background-image: url("/assets/comfort.gif"),
+            lightgray 0px -257.577px / 100% 140.561% no-repeat;
           height: 774px;
           background-size: cover;
           background-repeat: no-repeat;
