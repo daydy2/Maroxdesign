@@ -1,0 +1,16 @@
+.menpage {
+  &__section {
+    &-top {
+      .menpage__div {
+        &-top-container {
+          width: 100%;
+          height: 716px;
+          background: url("/assets/men-back.png"),
+            lightgray 0px -257.577px / 100% 140.561% no-repeat;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

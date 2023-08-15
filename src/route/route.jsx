@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import LandingLayout from "../layout/LandingLayout";
 import Homepage from "../page/Homepage";
 import WomenCat from "../page/WomenCat";
+import MenCat from "../page/MenCat";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/women",
         element: <WomenCat />,
+      },
+      {
+        path: "/men",
+        element: <MenCat />,
       },
     ],
   },

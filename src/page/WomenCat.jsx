@@ -19,11 +19,11 @@ const WomenCat = () => {
     <main className="womenpage">
       <section className="womenpage__section-intro pad-main py-[100px]">
         <IntroPage>
-          <img src={Intro} alt="intro" className="" />
-          <img src={Intro2} alt="intro" className="" />
-          <img src={Intro3} alt="intro" className="" />
-          <img src={Intro4} alt="intro" className="" />
-          <img src={Intro5} alt="intro" className="" />
+          <img src={Intro} alt="women carousel image" className="" />
+          <img src={Intro2} alt="women carousel image" className="" />
+          <img src={Intro3} alt="women carousel image" className="" />
+          <img src={Intro4} alt="women carousel image" className="" />
+          <img src={Intro5} alt="women carousel image" className="" />
         </IntroPage>
       </section>
 
@@ -35,8 +35,8 @@ const WomenCat = () => {
         </div>
       </section>
 
-      <section className="women__section-leggings py-[100px]">
-        <div className="women__div-leggings-container pad-main">
+      <section className="womenpage__section-leggings py-[100px]">
+        <div className="womenpage__div-leggings-container pad-main">
           <ProductCat title={"Womens Leggings "}>
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <ProductCard
@@ -51,8 +51,8 @@ const WomenCat = () => {
         </div>
       </section>
 
-      <section className="women__section-joggers ">
-        <div className="women__div-joggers-container pad-main">
+      <section className="womenpage__section-joggers ">
+        <div className="womenpage__div-joggers-container pad-main">
           <ProductCat title={"Womens Joggers"}>
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <ProductCard
@@ -67,8 +67,8 @@ const WomenCat = () => {
         </div>
       </section>
 
-      <section className="women__section-bra py-[100px]">
-        <div className="women__div-bra-container pad-main">
+      <section className="womenpage__section-bra py-[100px]">
+        <div className="womenpage__div-bra-container pad-main">
           <ProductCat title={"Women Sports Bras"}>
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <ProductCard
@@ -83,8 +83,8 @@ const WomenCat = () => {
         </div>
       </section>
 
-      <section className="women__section-leggins-set ">
-        <div className="women__div-leggins-set-container pad-main">
+      <section className="womenpage__section-leggins-set ">
+        <div className="womenpage__div-leggins-set-container pad-main">
           <ProductCat title={"Women Leggings set"}>
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <ProductCard
@@ -99,8 +99,8 @@ const WomenCat = () => {
         </div>
       </section>
 
-      <section className="women__section-shorts pt-[100px] pb-[300px]">
-        <div className="women__div-shorts-container pad-main">
+      <section className="womenpage__section-shorts pt-[100px] pb-[300px]">
+        <div className="womenpage__div-shorts-container pad-main">
           <ProductCat title={"Women Short set"}>
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <ProductCard
