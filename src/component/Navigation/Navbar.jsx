@@ -16,10 +16,10 @@ const Navbar = () => {
   return (
     <nav className="nav w-full">
       <div className="nav__div container flex items-center justify-between pad-main py-[28px]">
-        <div className="flex items-center gap-8">
+        <Link to={"/"} className="flex items-center gap-8">
           <img src={RMF} alt="rockfitness logo" />
           <img src={RockF} alt="rockfitness logo" />
-        </div>
+        </Link>
         <div className="nav__div-link flex items-center gap-8">
           <Link className="nav__div-link-item capitalize header__1 ">
             About us
