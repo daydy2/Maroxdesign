@@ -29,7 +29,7 @@ const Navbar = () => {
             <div>
               <ChevronDown size={18} />
             </div>
-            <div className="nav__div-link-dropdown">
+            <div className="nav__div-link-dropdown box">
               <div className="nav__div-link-dropdown-container">
                 <Link className="header__1 black" to={"/men"}>
                   Men
